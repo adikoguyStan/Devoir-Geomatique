@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association des Étudiants de Géomatique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+        header {
+            background-color: #007399;
+            color: #ffffff;
+            padding: 10px 0;
+            border-bottom: #00b3b3 3px solid;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        header a:hover {
+            color: #00b3b3;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .page {
+            display: none;
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .page.active {
+            display: block;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007399;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #00b3b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #007399;
+            color: white;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #00b3b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#accueil" data-page="accueil">Accueil</a>
+            <a href="#apropos" data-page="apropos">À Propos</a>
+            <a href="#services" data-page="services">Services</a>
+            <a href="#contacts" data-page="contacts">Contacts</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="accueil" class="page active">
+            <div class="container">
+                <h1>Bienvenue à l'Association des Étudiants de Géomatique</h1>
+                <p>Nous sommes une association dynamique regroupant les étudiants passionnés par la géomatique.</p>
+                <a href="#presentation" class="btn" data-page="presentation">Découvrir notre Association</a>
+            </div>
+        </div>
+
+        <div id="presentation" class="page">
+            <div class="container">
+                <h2>Présentation de l'Association</h2>
+                <p>Notre mission est de promouvoir la géomatique, faciliter les échanges entre étudiants et favoriser leur développement professionnel.</p>
+                <a href="#accueil" class="btn" data-page="accueil">Retour à l'Accueil</a>
+            </div>
+        </div>
+
+        <div id="apropos" class="page">
+            <div class="container">
+                <h2>À Propos de l'Association</h2>
+                <a href="#roles" class="btn" data-page="roles">Voir les Rôles des Membres</a>
+            </div>
+        </div>
+
+        <div id="roles" class="page">
+            <div class="container">
+                <h2>Rôles des Membres</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Nom et Prénoms</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Président</td><td>Anoh Adiko</td></tr>
+                        <tr><td>Vice-Président</td><td>Soro Djata</td></tr>
+                        <tr><td>Secrétaire Général</td><td>Aoundé Soares</td></tr>
+                        <tr><td>Trésorier</td><td>Yao Maynard</td></tr>
+                        <tr><td>Responsable Communication</td><td>N'Dri David</td></tr>
+                        <tr><td>Responsable Événementiel</td><td>Kouakou Aïcha</td></tr>
+                        <tr><td>Responsable Partenariats</td><td>Traoré Amara</td></tr>
+                        <tr><td>Responsable Formation</td><td>Toure Aminata</td></tr>
+                        <tr><td>Responsable Technique</td><td>Kouassi Albert</td></tr>
+                        <tr><td>Responsable Relations Internationales</td><td>Koné Mariam</td></tr>
+                        <tr><td>Assistant Technique</td><td>Soro Ibrahim</td></tr>
+                        <tr><td>Chargé de Projets</td><td>Gbe Yvonne</td></tr>
+                    </tbody>
+                </table>
+                <a href="#apropos" class="btn" data-page="apropos">Retour à Propos</a>
+            </div>
+        </div>
+
+        <div id="services" class="page">
+            <div class="container">
+                <h2>Nos Services</h2>
+                <ul>
+                    <li>Formations en Géomatique</li>
+                    <li>Conseils et Expertise SIG</li>
+                    <li>Cartographie Numérique</li>
+                    <li>Analyse Spatiale</li>
+                    <li>Développement de Projets Géospatiaux</li>
+                </ul>
+                <a href="#accueil" class="btn" data-page="accueil">Retour</a>
+            </div>
+        </div>
+
+        <div id="contacts" class="page">
+            <div class="container">
+                <h2>Contactez-Nous</h2>
+                <form id="contactForm">
+                    <input type="email" id="email" placeholder="Votre adresse email" required>
+                    <input type="text" id="sujet" placeholder="Sujet" required>
+                    <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Gestion de la navigation
+        document.querySelectorAll('nav a, .btn').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetPage = this.dataset.page;
+
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                document.getElementById(targetPage).classList.add('active');
+            });
+        });
+
+        // Gestion du formulaire
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message !');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
